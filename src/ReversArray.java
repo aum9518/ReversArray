@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class ReversArray {
 
    public void reversArray(int [] arr,int n){
@@ -10,5 +14,21 @@ public class ReversArray {
        for (int j = 0;j<n;j++){
            System.out.print(arr1[j]);
        }
+   }
+   public void reversArray1(int[] arr,int b){
+       int a ;
+       for (int i = 0;i<b/2;i++){
+           a=arr[i];
+           arr[i]=arr[b-i-1];
+           arr[b-i-1]=a;
+       }
+       for (int j=0;j<b;j++){
+           System.out.println(arr[j]);
+       }
+   }
+   public void collectionRevers(int arr[]){
+       Collections.reverse(Arrays.asList(arr));
+       System.out.println(Arrays.toString(arr));
+
    }
 }
